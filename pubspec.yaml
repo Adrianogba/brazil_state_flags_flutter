@@ -3,7 +3,7 @@ description: >-
   Flags of all 27 Brazilian states and the Federal District, drawn as vectors in
   pure Dart. No assets, no dependencies, sharp at any size. Bandeiras dos
   estados brasileiros e do Distrito Federal.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Adrianogba/brazil_state_flags_flutter
 repository: https://github.com/Adrianogba/brazil_state_flags_flutter
 issue_tracker: https://github.com/Adrianogba/brazil_state_flags_flutter/issues

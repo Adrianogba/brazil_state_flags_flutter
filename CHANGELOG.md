@@ -6,6 +6,22 @@ e [Semantic Versioning](https://semver.org/lang/pt-BR/).
 This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and [Semantic Versioning](https://semver.org/).
 
+## 1.0.1
+
+### Corrigido / Fixed
+
+**Português**
+
+- As imagens do README agora usam URLs absolutas. O pub.dev remove tags
+  `<img>` com caminhos relativos, então as capturas de tela não apareciam na
+  página do pacote, apesar de funcionarem no GitHub. Nenhuma mudança de código.
+
+**English**
+
+- README images now use absolute URLs. pub.dev strips `<img>` tags with
+  relative paths, so the screenshots did not show on the package page even
+  though they worked on GitHub. No code changes.
+
 ## 1.0.0
 
 Primeira versão. / First release.

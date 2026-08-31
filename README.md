@@ -10,7 +10,7 @@
   <a href="https://pub.dev/packages/brazil_state_flags"><img src="https://img.shields.io/pub/v/brazil_state_flags.svg?logo=dart&color=0175C2" alt="pub package"></a>
   <a href="https://pub.dev/packages/brazil_state_flags/score"><img src="https://img.shields.io/pub/points/brazil_state_flags?logo=dart&color=0175C2" alt="pub points"></a>
   <a href="https://pub.dev/packages/brazil_state_flags"><img src="https://img.shields.io/badge/platforms-all%206-42A5F5?logo=flutter" alt="platforms"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="license"></a>
+  <a href="https://github.com/Adrianogba/brazil_state_flags_flutter/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="license"></a>
 </p>
 
 <p align="center">
@@ -18,8 +18,8 @@
 </p>
 
 <p align="center">
-  <img src="screenshots/all_flags_circle.png" width="300" alt="Todas as bandeiras no estilo circle">
-  <img src="screenshots/styles_full.png" width="300" alt="Estilo full">
+  <img src="https://raw.githubusercontent.com/Adrianogba/brazil_state_flags_flutter/main/screenshots/all_flags_circle.png" width="300" alt="Todas as bandeiras no estilo circle">
+  <img src="https://raw.githubusercontent.com/Adrianogba/brazil_state_flags_flutter/main/screenshots/styles_full.png" width="300" alt="Estilo full">
 </p>
 
 ## O que você recebe
@@ -233,4 +233,4 @@ by `tool/generate_flags.dart`, which is included in the repository.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](https://github.com/Adrianogba/brazil_state_flags_flutter/blob/main/LICENSE).
