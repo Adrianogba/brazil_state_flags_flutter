@@ -34,3 +34,6 @@ migrate_working_dir/
 example/build/
 example/.dart_tool/
 example/pubspec.lock
+
+# Locally built release artifacts
+dist/
