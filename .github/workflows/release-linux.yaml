@@ -102,4 +102,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release upload "${{ steps.tag.outputs.value }}" \
-            "${{ steps.package.outputs.name }}"             "${{ steps.appimage.outputs.name }}" --clobber
+            "${{ steps.package.outputs.name }}" \r
+            "${{ steps.appimage.outputs.name }}" --clobber
