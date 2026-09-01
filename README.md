@@ -1,9 +1,8 @@
 <h1 align="center">brazil_state_flags</h1>
 
 <p align="center">
-  Bandeiras dos 26 estados brasileiros, do Distrito Federal e do Brasil,
-  desenhadas como vetores em Dart puro.<br>
-  Sem assets, sem dependências, nítidas em qualquer tamanho.
+  Bandeiras dos 26 estados brasileiros, do Distrito Federal e do Brasil.<br>
+  Nítidas em qualquer tamanho, em puro dart, compatível com qualquer sistema.
 </p>
 
 <p align="center">
@@ -25,10 +24,10 @@
 ## O que você recebe
 
 - **28 bandeiras** em **4 estilos**: `full` (3:2), `rounded` (3:2 com cantos arredondados), `square-rounded` e `circle`.
-- **Zero assets e zero dependências.** Cada bandeira é um `Path` vetorial compilado em Dart.
-- **Tree shaking de verdade.** O Flutter não remove assets não usados, mas remove constantes não usadas. Um app que cita uma bandeira leva **4,9 KB** do pacote, medido com `flutter build apk --analyze-size`, e não os cerca de 500 KB de dados de todas as 124.
+- **Zero assets e zero dependências a mais.** Cada bandeira é um `Path` vetorial compilado em Dart.
+- **Tree shaking.** O Flutter não remove assets não usados, mas remove constantes não usadas. Um app que cita uma bandeira leva **4,9 KB** do pacote, medido com `flutter build apk --analyze-size`, e não os cerca de 500 KB de dados de todas as 124.
 - Nítidas em qualquer tamanho, de 16 px a tela cheia.
-- Suporte a leitores de tela através de `semanticLabel`.
+- Suporte a leitores de tela usando `semanticLabel`.
 
 ## Instalação
 
