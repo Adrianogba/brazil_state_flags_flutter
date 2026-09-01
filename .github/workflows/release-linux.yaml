@@ -56,9 +56,50 @@ jobs:
           echo "name=$NAME" >> "$GITHUB_OUTPUT"
           ls -lh "$NAME"
 
+      - name: Build the AppImage
+        id: appimage
+        run: |
+          VERSION="${{ steps.tag.outputs.value }}"
+          VERSION="${VERSION#v}"
+          BUNDLE=example/build/linux/x64/release/bundle
+
+          # AppImage just needs the bundle wrapped in an AppDir with an AppRun,
+          # a .desktop file and an icon at the top level.
+          mkdir -p AppDir/usr/bin
+          cp -r "$BUNDLE"/* AppDir/usr/bin/
+
+          cat > AppDir/AppRun <<'SH'
+          #!/bin/sh
+          HERE="$(dirname "$(readlink -f "$0")")"
+          exec "$HERE/usr/bin/brazil_state_flags_example" "$@"
+          SH
+          chmod +x AppDir/AppRun
+
+          cat > AppDir/brazil_state_flags_example.desktop <<'DESKTOP'
+          [Desktop Entry]
+          Type=Application
+          Name=Bandeiras BR
+          Comment=Flags of the Brazilian states
+          Exec=brazil_state_flags_example
+          Icon=brazil_state_flags_example
+          Categories=Graphics;
+          Terminal=false
+          DESKTOP
+
+          cp packaging/icon.png AppDir/brazil_state_flags_example.png
+
+          wget -q https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
+          chmod +x appimagetool-x86_64.AppImage
+
+          NAME="brazil_state_flags_example-${VERSION}-x86_64.AppImage"
+          # FUSE is unavailable on the runner, so the tool has to unpack itself.
+          ./appimagetool-x86_64.AppImage --appimage-extract-and-run AppDir "$NAME"
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          ls -lh "$NAME"
+
       - name: Attach to the release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release upload "${{ steps.tag.outputs.value }}" \
-            "${{ steps.package.outputs.name }}" --clobber
+            "${{ steps.package.outputs.name }}"             "${{ steps.appimage.outputs.name }}" --clobber
