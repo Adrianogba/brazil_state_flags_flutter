@@ -12,21 +12,17 @@ and [Semantic Versioning](https://semver.org/).
 
 **Português**
 
-- A descrição do pacote dizia "27 estados e o Distrito Federal", o que conta
-  duas vezes: são 26 estados mais o Distrito Federal, 27 unidades federativas
-  no total.
-- Descrição encurtada para o limite de 180 caracteres do pub.dev.
-- Removido o campo `documentation`, que apontava para a própria URL do pub.dev
-  e falhava a verificação enquanto a documentação ainda estava sendo gerada.
+- Ajustes no `pubspec.yaml` para o pub.dev: descrição encurtada para o limite
+  de 180 caracteres e remoção do campo `documentation`, que apontava para a
+  própria URL do pub.dev e falhava a verificação de alcance enquanto a
+  documentação ainda estava sendo gerada.
 
 **English**
 
-- The package description said "27 Brazilian states and the Federal District",
-  which double counts: there are 26 states plus the Federal District, 27
-  federative units in total.
-- Description shortened to pub.dev's 180 character limit.
-- Dropped the `documentation` field, which pointed at pub.dev's own URL and
-  failed its reachability check while the docs were still being generated.
+- `pubspec.yaml` adjustments for pub.dev: the description is shortened to the
+  180 character limit, and the `documentation` field is gone since it pointed
+  at pub.dev's own URL and failed its reachability check while the docs were
+  still being generated.
 
 ## 1.0.1
 
